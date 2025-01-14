@@ -2,15 +2,14 @@ const clickCountDisplay = document.getElementById('click-count');
         const header = document.getElementById('header');
         const button = document.getElementById('click-button');
        
-//1.Add a comment here explaining the let clickCount variable  
+//1. After you click you get an item  
         let clickCount = localStorage.getItem('clickCount') ? parseInt(localStorage.getItem('clickCount')) : 0;
 
         // Update display on load
         clickCountDisplay.textContent = clickCount;
         updateUI();
 
-//2.Explain what this event listener function does (and what function it calls).
-        // Add event listener to button
+//2. It makes the sound of a click after clicking the button
         button.addEventListener('click', () => {
             clickCount++;
             localStorage.setItem('clickCount', clickCount);
